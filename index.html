@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: black;
+        }
+        .fixed-image {
+            width: 160px;
+            height: 23px;
+        }
+        .hiroki {
+            color: red;
+            font-size: 16px;
+            padding: 0 12px;
+            
+        }
+            
+            
+        
+        .keito {
+            color: red;
+            padding: 0 12px;
+
+            
+        }
+        .logo-link {
+            height: 46px;
+        }
+        .pato {
+            border-bottom: solid 1px; 
+            display: flex;
+            
+                 
+            
+            
+        }
+        .nav {
+            display: flex;
+            flex-wrap: wrap;
+            max-width: 1100px; 
+            
+            
+            align-items: center;
+            margin: 0;
+            list-style: none;
+            padding: 0;
+            
+        }
+
+        .taiki {
+            color: red;
+            padding: 0 12px;
+            
+            
+        }
+        .yamada {
+            color: red;
+            padding: 0 12px;
+            
+            
+        }
+          .SP {
+            color: red;
+            padding: 0 12px;
+           
+            
+        }
+            .VI {
+            color: red;
+            padding: 0 12px;
+            
+            
+        }
+        .KE {
+            color: red;
+            padding: 0 12px;
+            
+            
+        }
+          .TE {
+            color: red;
+            padding: 0 12px;
+            
+        }
+      .ON {
+            color: red;
+            padding: 0 12px;
+            
+            
+        }
+          .KA {
+            color: red;
+            padding: 0 12px;
+           
+            
+        }
+     .CA {
+            color: red;
+            padding: 0 12px;
+          
+            
+        }
+     .AB {
+            color: red;            .indicator {
+                color: #888;
+                margin: 0 5px;
+                cursor: pointer;
+                font-size: 1em; /* ここを小さくする（例: 1em, 0.8em など） */
+            }
+            .indicator.active {
+                color: red;
+            }
+            
+            
+            
+        }
+  .suraido {
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    height: 500px;
+    margin: auto;
+    overflow: hidden;
+  }
+        
+        a, a:visited, a:hover, a:active {
+    text-decoration: none;
+}
+    </style>
+</head>
+<body>
+    <div class="pato">
+        <a href="https://www.kate-global.net/" class="logo-link">
+            <img src="./cmn-logo-kate-s.png" alt="KATE TOKYO ロゴ" class="fixed-image">
+        </a>
+        <ul class="nav">
+           <a href="index2.html"><li class="hiroki">TOP </li> </a>
+            <a href="index3.html"><li class="keito">PICK UP</li> </a>
+            <a href="index4.html"><li class="taiki">ALL PRODUCTS</li></a>
+            <a href="index5.html"><li class="yamada">AD GALLERY </li></a>
+            <a href="index6.html"><li class="SP">SPECIAL </li></a>
+            <a href="index7.html"><li class="VI">VIRTUAL TESTER</li></a>
+            <a href="index8.html"><li class="KE"h________>KATE ZONE</li></a>
+            <a href="index9.html"><li class="TE">KATE SHIBUYA</li></a>
+            <a href="index10.html"><li class="ON">ONLINE　SHOP</li></a>
+            <a href="index11.html"><li class="KA">KATE MAGAZINE</li></a>
+            <a href="index12.html"><li class="CA">CAMPAIGN</li></a>
+            <a href="index13.html"><li class="AB">ABOUT KATE</li></a>
+        </ul>
+    </div>
+    <div class="suraido">
+        <img src="usj-top-kv-s-250818.png" alt="サンプル画像" class="slide">
+        <img src="index-top-kv-poreless_keeper-m.png" alt="画像2" class="slide">
+        <img src="index-top-kv-jujutsukaisen-s.png" alt="追加画像" class="slide active">
+        <img src="index-top-kv-mellow_brown_eyes-s.jpeg" alt="追加画像2" class="slide">
+    </div>
+    <div class="indicators" style="text-align:center; margin-top:10px;">
+        <span class="indicator" data-index="0">●</span>
+        <span class="indicator" data-index="1">●</span>
+        <span class="indicator active" data-index="2">●</span>
+        <span class="indicator" data-index="3">●</span>
+    </div>
+
+    <div class="insa">
+        <div style="text-align:center; color:red; font-size:30px; margin-top:30px;">
+            <p>Instagram PICK UP ITEM</p>
+    </div>
+</div>
+    <script>
+    const slides = document.querySelectorAll('.slide');
+    const indicators = document.querySelectorAll('.indicator');
+    let current = 2;
+
+    function showSlide(index) {
+        slides.forEach((slide, i) => {
+            slide.classList.remove('active');
+            indicators[i].classList.remove('active');
+        });
+        slides[index].classList.add('active');
+        indicators[index].classList.add('active');
+        current = index;
+    }
+
+    indicators.forEach(indicator => {
+        indicator.onclick = function() {
+            showSlide(Number(this.dataset.index));
+        };
+    });
+
+    // 自動スライド（必要なら）
+    setInterval(() => {
+        let next = (current + 1) % slides.length;
+        showSlide(next);
+    }, 3000);
+
+    showSlide(current);
+    </script>
+    <style>
+    .slide {
+        display: none;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .slide.active {
+        display: block;
+    }
+    .indicator {
+        color: #888;
+        margin: 0 5px;
+        cursor: pointer;
+        font-size: 1em;
+    }
+    .indicator.active {
+        color: red;
+    }
+    </style>
+</body>
+</html>
