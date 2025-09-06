@@ -3,217 +3,206 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>KATE TOKYO - 化粧品ブランド</title>
     <style>
+        /* 基本スタイル */
         body {
             background-color: black;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
         }
-        .fixed-image {
-            width: 160px;
-            height: 23px;
-        }
-        .hiroki {
-            color: red;
-            font-size: 16px;
-            padding: 0 12px;
-            
-        }
-            
-            
-        
-        .keito {
-            color: red;
-            padding: 0 12px;
 
-            
+        /* リンクスタイル */
+        a, a:visited, a:hover, a:active {
+            text-decoration: none;
         }
+
+        /* ヘッダー部分 */
+        .header {
+            border-bottom: solid 1px #333;
+            display: flex;
+            align-items: center;
+            padding: 10px 20px;
+        }
+
         .logo-link {
             height: 46px;
         }
-        .pato {
-            border-bottom: solid 1px; 
-            display: flex;
+
+        .logo-image {
+            width: 160px;
+            height: 23px;
         }
+
+        /* ナビゲーション */
         .nav {
             display: flex;
             flex-wrap: wrap;
-            max-width: 1100px; 
-            
-            
+            max-width: 1100px;
             align-items: center;
             margin: 0;
             list-style: none;
             padding: 0;
-            
         }
 
-        .taiki {
+        .nav-item {
             color: red;
             padding: 0 12px;
-            
-            
+            font-size: 16px;
+            cursor: pointer;
+            transition: color 0.3s ease;
         }
-        .yamada {
+
+        .nav-item:hover {
+            color: #ff6666;
+        }
+
+        /* スライドショー */
+        .slideshow {
+            position: relative;
+            width: 100%;
+            max-width: 1200px;
+            height: 500px;
+            margin: auto;
+            overflow: hidden;
+        }
+
+        .slide {
+            display: none;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .slide.active {
+            display: block;
+        }
+
+        /* インジケーター */
+        .indicators {
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .indicator {
+            color: #888;
+            margin: 0 5px;
+            cursor: pointer;
+            font-size: 1em;
+            transition: color 0.3s ease;
+        }
+
+        .indicator:hover {
+            color: #aaa;
+        }
+
+        .indicator.active {
             color: red;
-            padding: 0 12px;
-            
-            
         }
-          .SP {
+
+        /* コンテンツセクション */
+        .content-section {
+            text-align: center;
             color: red;
-            padding: 0 12px;
-           
-            
+            font-size: 30px;
+            margin-top: 30px;
         }
-            .VI {
-            color: red;
-            padding: 0 12px;
-            
-            
-        }
-        .KE {
-            color: red;
-            padding: 0 12px;
-            
-            
-        }
-          .TE {
-            color: red;
-            padding: 0 12px;
-            
-        }
-      .ON {
-            color: red;
-            padding: 0 12px;
-            
-            
-        }
-          .KA {
-            color: red;
-            padding: 0 12px;
-           
-            
-        }
-     .CA {
-            color: red;
-            padding: 0 12px;
-          
-            
-        }
-     .AB {
-            color: red;            .indicator {
-                color: #888;
-                margin: 0 5px;
-                cursor: pointer;
-                font-size: 1em; /* ここを小さくする（例: 1em, 0.8em など） */
-            }
-            .indicator.active {
-                color: red;
-            }
-            
-            
-            
-        }
-  .suraido {
-    position: relative;
-    width: 100%;
-    max-width: 1200px;
-    height: 500px;
-    margin: auto;
-    overflow: hidden;
-  }
-        
-        a, a:visited, a:hover, a:active {
-    text-decoration: none;
-}
     </style>
 </head>
 <body>
-    <div class="pato">
+    <!-- ヘッダー -->
+    <header class="header">
         <a href="https://www.kate-global.net/" class="logo-link">
-            <img src="./cmn-logo-kate-s.png" alt="KATE TOKYO ロゴ" class="fixed-image">
+            <img src="./cmn-logo-kate-s.png" alt="KATE TOKYO ロゴ" class="logo-image">
         </a>
-        <ul class="nav">
-           <a href="index2.html"><li class="hiroki">TOP </li> </a>
-            <a href="index3.html"><li class="keito">PICK UP</li> </a>
-            <a href="index4.html"><li class="taiki">ALL PRODUCTS</li></a>
-            <a href="index5.html"><li class="yamada">AD GALLERY </li></a>
-            <a href="index6.html"><li class="SP">SPECIAL </li></a>
-            <a href="index7.html"><li class="VI">VIRTUAL TESTER</li></a>
-            <a href="index8.html"><li class="KE"h________>KATE ZONE</li></a>
-            <a href="index9.html"><li class="TE">KATE SHIBUYA</li></a>
-            <a href="index10.html"><li class="ON">ONLINE　SHOP</li></a>
-            <a href="index11.html"><li class="KA">KATE MAGAZINE</li></a>
-            <a href="index12.html"><li class="CA">CAMPAIGN</li></a>
-            <a href="index13.html"><li class="AB">ABOUT KATE</li></a>
-        </ul>
-    </div>
-    <div class="suraido">
-        <img src="usj-top-kv-s-250818.png" alt="サンプル画像" class="slide">
-        <img src="index-top-kv-poreless_keeper-m.png" alt="画像2" class="slide">
-        <img src="index-top-kv-jujutsukaisen-s.png" alt="追加画像" class="slide active">
-        <img src="index-top-kv-mellow_brown_eyes-s.jpeg" alt="追加画像2" class="slide">
-    </div>
-    <div class="indicators" style="text-align:center; margin-top:10px;">
+        <nav>
+            <ul class="nav">
+                <li><a href="index2.html" class="nav-item">TOP</a></li>
+                <li><a href="index3.html" class="nav-item">PICK UP</a></li>
+                <li><a href="index4.html" class="nav-item">ALL PRODUCTS</a></li>
+                <li><a href="index5.html" class="nav-item">AD GALLERY</a></li>
+                <li><a href="index6.html" class="nav-item">SPECIAL</a></li>
+                <li><a href="index7.html" class="nav-item">VIRTUAL TESTER</a></li>
+                <li><a href="index8.html" class="nav-item">KATE ZONE</a></li>
+                <li><a href="index9.html" class="nav-item">KATE SHIBUYA</a></li>
+                <li><a href="index10.html" class="nav-item">ONLINE SHOP</a></li>
+                <li><a href="index11.html" class="nav-item">KATE MAGAZINE</a></li>
+                <li><a href="index12.html" class="nav-item">CAMPAIGN</a></li>
+                <li><a href="index13.html" class="nav-item">ABOUT KATE</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- スライドショー -->
+    <main class="slideshow">
+        <img src="usj-top-kv-s-250818.png" alt="USJ コラボレーション" class="slide">
+        <img src="index-top-kv-poreless_keeper-m.png" alt="ポアレスキーパー" class="slide">
+        <img src="index-top-kv-jujutsukaisen-s.png" alt="呪術廻戦 コラボレーション" class="slide active">
+        <img src="index-top-kv-mellow_brown_eyes-s.jpeg" alt="メロウブラウンアイズ" class="slide">
+    </main>
+
+    <!-- インジケーター -->
+    <div class="indicators">
         <span class="indicator" data-index="0">●</span>
         <span class="indicator" data-index="1">●</span>
         <span class="indicator active" data-index="2">●</span>
         <span class="indicator" data-index="3">●</span>
     </div>
 
-    <div class="insa">
-        <div style="text-align:center; color:red; font-size:30px; margin-top:30px;">
-            <p>Instagram PICK UP ITEM</p>
-    </div>
-</div>
+    <!-- コンテンツセクション -->
+    <section class="content-section">
+        <p>Instagram PICK UP ITEM</p>
+    </section>
+
     <script>
-    const slides = document.querySelectorAll('.slide');
-    const indicators = document.querySelectorAll('.indicator');
-    let current = 2;
+        // スライドショー機能
+        const slides = document.querySelectorAll('.slide');
+        const indicators = document.querySelectorAll('.indicator');
+        let current = 2;
+        let slideInterval;
 
-    function showSlide(index) {
-        slides.forEach((slide, i) => {
-            slide.classList.remove('active');
-            indicators[i].classList.remove('active');
+        // スライド表示関数
+        function showSlide(index) {
+            // 全てのスライドとインジケーターを非アクティブにする
+            slides.forEach((slide, i) => {
+                slide.classList.remove('active');
+                indicators[i].classList.remove('active');
+            });
+            
+            // 指定されたスライドとインジケーターをアクティブにする
+            slides[index].classList.add('active');
+            indicators[index].classList.add('active');
+            current = index;
+        }
+
+        // 次のスライドに移動
+        function nextSlide() {
+            const next = (current + 1) % slides.length;
+            showSlide(next);
+        }
+
+        // インジケータークリックイベント
+        indicators.forEach(indicator => {
+            indicator.addEventListener('click', function() {
+                showSlide(Number(this.dataset.index));
+                // 自動スライドをリセット
+                clearInterval(slideInterval);
+                slideInterval = setInterval(nextSlide, 3000);
+            });
         });
-        slides[index].classList.add('active');
-        indicators[index].classList.add('active');
-        current = index;
-    }
 
-    indicators.forEach(indicator => {
-        indicator.onclick = function() {
-            showSlide(Number(this.dataset.index));
-        };
-    });
+        // 自動スライド開始
+        function startAutoSlide() {
+            slideInterval = setInterval(nextSlide, 3000);
+        }
 
-    // 自動スライド（必要なら）
-    setInterval(() => {
-        let next = (current + 1) % slides.length;
-        showSlide(next);
-    }, 3000);
-
-    showSlide(current);
+        // 初期化
+        showSlide(current);
+        startAutoSlide();
     </script>
-    <style>
-    .slide {
-        display: none;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
-    .slide.active {
-        display: block;
-    }
-    .indicator {
-        color: #888;
-        margin: 0 5px;
-        cursor: pointer;
-        font-size: 1em;
-    }
-    .indicator.active {
-        color: red;
-    }
-    </style>
 </body>
 </html>
